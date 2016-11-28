@@ -1,0 +1,12 @@
+<h2>Lista de Canales</h2>
+
+<dl>
+  {{#each model as |canal|}}
+    <div>
+      <dt>{{canal.name}} ({{canal.num_members}})</dt>
+      {{#if canal.purpose}}
+        <dd>{{canal.purpose}}</dd>
+      {{/if}}
+    </div>
+  {{/each}}
+</dl>

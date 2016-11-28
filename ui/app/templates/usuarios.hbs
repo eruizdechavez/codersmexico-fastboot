@@ -1,0 +1,12 @@
+<h2>Lista de Usuarios</h2>
+
+<dl>
+  {{#each model as |usuario|}}
+    <div>
+      <dt>{{usuario.name}}</dt>
+      {{#if usuario.real_name}}
+        <dd>{{usuario.real_name}}</dd>
+      {{/if}}
+    </div>
+  {{/each}}
+</dl>
