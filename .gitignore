@@ -8,4 +8,5 @@ coverage/*
 libpeerconnection.log
 npm-debug.log*
 testem.log
+development.yml
 production.yml

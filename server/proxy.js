@@ -1,8 +1,9 @@
 const Redbird = require('redbird');
-const proxy = new Redbird({ port: 8080 });
-proxy.register('localhost:8080', 'localhost:3000');
-proxy.register('localhost:8080/api', 'localhost:3001');
-proxy.register('localhost:8080/status', 'localhost:8888');
+const config = require('indecent');
+const proxy = new Redbird({ port: config.ports.proxy });
+
+const urls = config.proxy || [];
+urls.forEach(url => proxy.register(url.from, url.to));
 
 const http = require('http');
 const server = http.createServer((req, res) => res.end('proxy running'));
