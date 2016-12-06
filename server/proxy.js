@@ -7,4 +7,4 @@ urls.forEach(url => proxy.register(url.from, url.to));
 
 const http = require('http');
 const server = http.createServer((req, res) => res.end('proxy running'));
-server.listen(8888, 'localhost');
+server.listen(config.ports.proxy_status, 'localhost');

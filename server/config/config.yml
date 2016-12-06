@@ -1,3 +1,8 @@
+ports:
+  fastboot: 3000
+  api: 3001
+  proxy: 8080
+  proxy_status: 8888
 slack:
   url: https://slack.com/api
   token:

@@ -53,6 +53,6 @@ server.get('/usuarios', (req, res, next) => {
   });
 });
 
-server.listen(3001, () => {
+server.listen(config.ports.api, () => {
   console.log(`${server.name} listening at ${server.url}`);
 });
